@@ -127,3 +127,43 @@ function my_keydown(e) {
         console.log("Unique");
     }
 }
+
+function up() {
+    if (player_y >= 0) {
+        player_y -= block_image_height;
+        console.log("Block image height = " + block_image_height);
+        console.log("When up arrow key is pressed, X = " + player_x + " and Y = " + player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
+
+function down() {
+    if (player_y <= 500) {
+        player_y += block_image_height;
+        console.log("Block image height = " + block_image_height);
+        console.log("When down arrow key is pressed, X = " + player_x + " and Y = " + player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
+
+function left() {
+    if (player_x >= 0) {
+        player_x -= block_image_height;
+        console.log("Block image height = " + block_image_height);
+        console.log("When left arrow key is pressed, X = " + player_x + " and Y = " + player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
+
+function right() {
+    if (player_x <= 900) {
+        player_x += block_image_height;
+        console.log("Block image height = " + block_image_height);
+        console.log("When right arrow key is pressed, X = " + player_x + " and Y = " + player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
